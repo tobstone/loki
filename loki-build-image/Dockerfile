@@ -47,7 +47,7 @@ RUN GO111MODULE=on go get github.com/tcnksm/ghr
 FROM golang:1.17.2 as nfpm
 RUN GO111MODULE=on go get github.com/goreleaser/nfpm/v2/cmd/nfpm@v2.11.3
 
-FROM golang:1.17.2-buster
+FROM golang:1.18.6-buster
 RUN apt-get update && \
     apt-get install -qy \
     musl gnupg ragel \
